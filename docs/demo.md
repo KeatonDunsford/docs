@@ -1,8 +1,8 @@
 ---
 navhome: /docs/
-sort: 3
+sort: 2
 ---
 
-# Examples
+# Demo
 
 <list/>
