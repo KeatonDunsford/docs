@@ -1,17 +1,15 @@
 ---
 navhome: /developer/docs/
-sort: 7
+next: true
+sort: 4
+title: %^ "cenket"
 ---
 
-# `:calq  %^  "cenket"` 
+# `%^ "cenket"` 
 
-`{$calq p/seed q/seed r/seed s/seed}`: call with triple sample.
+`{$cnkt p/seed q/seed r/seed s/seed}`: call with triple sample.
 
 ## Expands to
-
-```
-:call(p [q r s])
-```
 
 ```
 %-(p [q r s])
@@ -22,12 +20,6 @@ sort: 7
 Regular: *4-fixed*.
 
 ## Examples
-
-```
-~zod:dojo> =add-triple :gate({a/@ b/@ c/@} :(add a b c))
-~zod:dojo> :calq(add-triple 1 2 3)
-6
-```
 
 ```
 ~zod:dojo> =add-triple |=({a/@ b/@ c/@} :(add a b c))

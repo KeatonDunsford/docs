@@ -1,20 +1,16 @@
 ---
 navhome: /docs
-sort: 8
+next: true
+sort: 7
+title: %* "centar"
 ---
 
-# `:bake  %*  "centar"`
+# `%* "centar"`
 
-`{$bake p/wing q/twig r/(list (pair wing seed))}`: make
+`{$cntr p/wing q/twig r/(list (pair wing seed))}`: make
 with arbitrary twig.
 
 ## Expands to
-
-```
-:pin  q
-:make p
-r
-```
 
 ```
 =+  q

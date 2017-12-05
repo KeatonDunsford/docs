@@ -1,9 +1,10 @@
 ---
 navhome: /developer/docs/
 sort: 8
+title: Test ? ("wut")
 ---
 
-# Test, `?` ("wut")
+# Test `?` ("wut")
  
 Hoon has the usual branches and logical tests.  For pattern
 matching, it also has a `$fits` twig that tests whether a value

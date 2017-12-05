@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 6
-
+title: $^ "bucket"
 ---
 
-# `:bush  $^  "bucket"` 
+# `$^ "bucket"` 
 
-`{$bush p/moss q/moss}`: mold which normalizes a union tagged by head depth.
+`[%bckt p=moss q=moss]`: mold which normalizes a union tagged by head depth.
 
 ## Normalizes to
 
@@ -24,24 +25,9 @@ Regular: *2-fixed*.
 ## Examples
 
 ```
-~zod:dojo> =a :book({$foo p/@ud q/@ud} {$bar p/@ud})
+~zod:dojo> =a $%([%foo p=@ud q=@ud] [$bar p=@ud])
 
-~zod:dojo> =b :bush({a a} a)
-
-~zod:dojo> (b [[%bar 33] [%foo 19 22]])
-[[%bar p=33] [%foo p=19 q=22]]
-
-~zod:dojo> (b [%foo 19 22])
-[%foo p=19 q=22]
-
-~zod:dojo> $:b
-[%bar p=0]
-```
-
-```
-~zod:dojo> =a $%({$foo p/@ud q/@ud} {$bar p/@ud})
-
-~zod:dojo> =b $^({a a} a)
+~zod:dojo> =b $^([a a] a)
 
 ~zod:dojo> (b [[%bar 33] [%foo 19 22]])
 [[%bar p=33] [%foo p=19 q=22]]

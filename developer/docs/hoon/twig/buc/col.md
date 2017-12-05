@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 2
-
+next: true
+sort: 4
+title: $: "buccol"
 ---
 
-# `:bank  $:  "buccol"` 
+# `$: "buccol"` 
 
-`{$bank p/(list moss)}`: form a mold which recognizes a tuple.
+`[%bccl p=(list moss)]`: form a mold which recognizes a tuple.
 
 ## Normalizes
 
@@ -25,25 +26,12 @@ Crashes if `p` is empty.
 
 Regular: *running*.
 
-Irregular: `{a b c}` is `:bank(a b c)`.
+Irregular: `,[a b c]` is `$:(a b c)`.
 
 ## Examples
 
 ```
-~zod:dojo> =foo :bank(p/@ud q/@tas)
-
-~zod:dojo> (foo 33 %foo)
-[p=33 q=%foo]
-
-~zod:dojo> `foo`[33 %foo]
-[p=33 q=%foo]
-
-~zod:dojo> $:foo
-[p=0 q=%$]
-```
-
-```
-~zod:dojo> =foo $:(p/@ud q/@tas)
+~zod:dojo> =foo $:(p=@ud q=@tas)
 
 ~zod:dojo> (foo 33 %foo)
 [p=33 q=%foo]

@@ -1,10 +1,10 @@
 ---
 navhome: /developer/docs/
 sort: 3
-
+title: Cell : ("col")
 ---
 
-# Cells, `:` ("col")
+# Cell `:` ("col")
 
 The cell twigs, `$cons` and friends, are simple and regular.
 All `:` twigs expand to `$cons`, which makes a pair (just like

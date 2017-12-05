@@ -1,10 +1,10 @@
 ---
 navhome: /developer/docs/
 sort: 11
-
+title: Make ; ("sem")
 ---
 
-# Make, `;` ("sem")
+# Make `;` ("sem")
 
 Miscellaneous useful macros.
 

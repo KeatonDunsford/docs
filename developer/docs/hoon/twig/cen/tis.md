@@ -1,11 +1,12 @@
 ---
 navhome: /developer/docs/
-sort: 1
+sort: 8
+title: %= "centis"
 ---
 
-# `:make  %=  "centis"`
+# `%= "centis"`
 
-`{$make p/wing q/(list (pair wing seed))}`: take a wing with changes.
+`{$cnts p/wing q/(list (pair wing seed))}`: take a wing with changes.
 
 ## Produces
 

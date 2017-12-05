@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 4
-
+next: true
+sort: 3
+title: $% "buccen"
 ---
 
-# `:book  $%  "buccen"` 
+# `$% "buccen"` 
 
-`{$book p/(list {{aura @} moss})}`: mold which recognizes a union tagged by head atom.
+`[%bccn p=(list [[aura @] moss])]`: mold which recognizes a union tagged by head atom.
 
 ## Normalizes to
 
@@ -26,25 +27,15 @@ Regular form: *2-running*.
 
 ## Discussion
 
-A book is a tagged union, an extremely common data model.
+A `$%` ("buccen") is a tagged union, an extremely common data model.
 
-Each item in a book is called a "page."  Make sure the first page
-in the book terminates, or the default will be an infinite loop!
+Make sure the first item in your `$%` terminates, or the default will 
+be an infinite loop!
 
 ## Examples
 
 ```
-~zod:dojo> =foo :book({$foo p/@ud q/@ud} {$bar p/@ud})
-
-~zod:dojo> (foo [%bar 37])
-[%bar p=37]
-
-~zod:dojo> $:foo
-[%foo p=0 q=0]~
-```
-
-```
-~zod:dojo> =foo $%({$foo p/@ud q/@ud} {$bar p/@ud})
+~zod:dojo> =foo $%([%foo p=@ud q=@ud] [%bar p=@ud])
 
 ~zod:dojo> (foo [%bar 37])
 [%bar p=37]

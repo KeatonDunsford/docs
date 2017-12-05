@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 5
-
+next: true
+sort: 7
+title: $@ "bucpat"
 ---
 
-# `:claw  $@  "bucpat"`
+# `$@ "bucpat"`
 
-`{$claw p/moss q/moss}`: mold which normalizes a union tagged by depth.
+`[%bcpt p=moss q=moss]`: mold which normalizes a union tagged by depth.
   
 ## Normalizes to
 
@@ -27,21 +28,9 @@ Product: a mold which applies `p` if its sample is an atom,
 Regular form: *2-fixed*.
 
 Example:
-```
-~zod:dojo> =a :claw($foo :bank(p/$bar q/@ud))
-
-~zod:dojo> (a %foo)
-%foo
-
-~zod:dojo> `a`[%bar 99]
-[p=%bar q=99]
-
-~zod:dojo> $:a
-[%foo p=0 q=0]
-```
 
 ```
-~zod:dojo> =a $@($foo $:(p/$bar q/@ud))
+~zod:dojo> =a $@(%foo $:(p=$bar q=@ud))
 
 ~zod:dojo> (a %foo)
 %foo

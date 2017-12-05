@@ -1,6 +1,7 @@
 ---
 navhome: /developer/docs/
 sort: 2
+title: Limbs and wings
 ---
 
 # Limbs and wings

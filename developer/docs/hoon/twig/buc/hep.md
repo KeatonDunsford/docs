@@ -1,21 +1,15 @@
 ---
 navhome: /developer/docs/
-sort: 8
-
+next: true
+sort: 5
+title: $- "buchep"
 ---
 
-# `:lamb  $- "buchep"`
+# `$- "buchep"`
 
-`{$lamb p/moss q/moss}`: mold which normalizes to an example gate.
+`[%bchp p=moss q=moss]`: mold which normalizes to an example gate.
 
 ## Expands to
-
-```
-:shoe
-:iron
-:gate  p
-$:q
-```
 
 ```
 $_  ^|
@@ -28,21 +22,14 @@ Regular: *2-fixed*.
 
 ## Discussion
 
-Since a lamb (ie, lambda), is a shoe, it is not useful for normalizing, just
-for typechecking.  In particular, the existence of lambs does *not* let us send
+Since a `$-` ("buchep") is a `$_` ("buccab"), it is not useful for normalizing, just
+for typechecking.  In particular, the existence of `$-`'s does *not* let us send
 gates or other cores over the network!
 
 ## Examples
 
 ```
-~zod:dojo> =foo :lamb($foo $bar)
-
-~zod:dojo> ($:foo %foo)
-%bar
-```
-
-```
-~zod:dojo> =foo $-($foo $bar)
+~zod:dojo> =foo $-(%foo %bar)
 
 ~zod:dojo> ($:foo %foo)
 %bar

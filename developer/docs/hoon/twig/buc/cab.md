@@ -1,48 +1,32 @@
 ---
 navhome: /developer/docs/
-sort: 9
+next: true
+sort: 2
+title: $_ "buccab"
 ---
 
-# `:shoe  $_  "buccab"`
+# `$_ "buccab"`
 
-`{$shoe p/seed}`: mold which normalizes to an example.
+`[%bccb p=seed]`: mold which normalizes to an example.
 
 ## Expands to
 
 ```
-:gate  *
-p
-```
-
-```
-|=(*  p)
+|=(* p)
 ```
 
 ## Syntax
 
 Regular: *1-fixed*.
 
-Irregular: `_foo` is `:shoe(foo)`.
+Irregular: `_foo` is `$_(foo)`.
 
 ## Discussion
 
-A shoe discards the sample it's supposedly normalizing, and
-produces its example instead.
+A `$_` ("buccab") discards the sample it's supposedly normalizing, 
+and produces its *example* instead.
 
 ## Examples
-
-```
-~zod:dojo> =foo :shoe([%foobar %moobaz])
-
-~zod:dojo> (foo %foo %bar)
-[%foobar %moobaz]
-
-~zod:dojo> `foo`[%foobar %moobaz]
-[%foobar %moobaz]
-
-~zod:dojo $:foo
-[%foobar %moobaz]
-```
 
 ```
 ~zod:dojo> =foo $_([%foobar %moobaz])

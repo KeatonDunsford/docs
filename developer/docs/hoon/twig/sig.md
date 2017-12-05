@@ -1,10 +1,10 @@
 ---
 navhome: /developer/docs/
 sort: 12
-
+title: Hint ~ ("sig")
 ---
 
-# Hints, `~` ("sig")
+# Hint `~` ("sig")
 
 Twigs that use Nock `10` to pass non-semantic info to the
 interpreter.
