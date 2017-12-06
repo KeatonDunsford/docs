@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 2
+title: ;~ "semsig"
 ---
 
-# `:dip  ;~  "semsig"`
+# `;~ "semsig"`
 
-`{$dip p/seed q/(list seed)}`: glue a pipeline together with a 
+`[%smsg p=seed q=(list seed)]`: glue a pipeline together with a 
 product-sample adapter.
 
 ## Produces
@@ -22,14 +24,14 @@ transforms a `q` product and a `q` gate into a `q` sample.
 `;~(a b c)` expands to
 
 ```
-|=  arg/*
+|=  arg=*
 (a (b arg) c(+6 arg))
 ```
 
 `;~(a b c d)` expands to
 
 ```
-|=  arg/*
+|=  arg=*
 %+  a (b arg)
 =+  arg=arg
 |.  (a (c arg) d(+6 arg))
@@ -49,12 +51,12 @@ transforms a `q` product and a `q` gate into a `q` sample.
 
 ## Discussion
 
-Apparently `:dip` is a "Kleisli arrow."  Whatevs.  It's also 
+Apparently `;~` ("semsig") is a "Kleisli arrow."  Whatevs.  It's also 
 a close cousin of the infamous "monad."  Don't let that bother
 you either.  Hoon doesn't know anything about category theory,
 so you don't need to either.
 
-`:dip` is often used in parsers, but is not only for parsers.
+`;~` is often used in parsers, but is not only for parsers.
 
 This can be thought of as user-defined function composition; instead of simply
 nesting the gates in `q`, each is passed individually to `p` with the product
@@ -71,7 +73,7 @@ A simple "parser."  `trip` converts a `cord` (atomic string) to
 a `tape` (linked string).
 
 ```
-~zod:dojo> =cmp |=({a/tape b/$-(char tape)} `tape`?~(a ~ (weld (b i.a) t.a)))
+~zod:dojo> =cmp |=([a=tape b=$-(char tape)] `tape`?~(a ~ (weld (b i.a) t.a)))
 ~zod:dojo> ;~(cmp trip)
 <1.zje {a/@ <409.yxa 110.lxv 1.ztu $151>}>
 ~zod:dojo> (;~(cmp trip) 'a')
@@ -81,23 +83,23 @@ a `tape` (linked string).
 With just one gate in the pipeline `q`, the glue `p` is unused:
 
 ```
-~zod:dojo> (;~(cmp trip |=(a/@ ~[a a])) 'a')
+~zod:dojo> (;~(cmp trip |=(a=@ ~[a a])) 'a')
 "aa"
-~zod:dojo> (;~(cmp trip |=(a/@ ~[a a])) '')
+~zod:dojo> (;~(cmp trip |=(a=@ ~[a a])) '')
 ""
 ```
 
 But for multiple gates, we need it to connect the pipeline:
 
 ```
-~zod:dojo> (;~(cmp trip ;~(cmp |=(a/@ ~[a a]) |=(a/@ <(dec a)>))) 'b')
+~zod:dojo> (;~(cmp trip ;~(cmp |=(a=@ ~[a a]) |=(a=@ <(dec a)>))) 'b')
 "97b"
-~zod:dojo> (;~(cmp trip |=(a/@ ~[a a]) |=(a/@ <(dec a)>)) 'b')
+~zod:dojo> (;~(cmp trip |=(a=@ ~[a a]) |=(a=@ <(dec a)>)) 'b')
 "97b"
-~zod:dojo> (;~(cmp trip |=(a/@ ~[a a]) |=(a/@ <(dec a)>)) '')
+~zod:dojo> (;~(cmp trip |=(a=@ ~[a a]) |=(a=@ <(dec a)>)) '')
 ""
-~zod:dojo> (;~(cmp trip |=(a/@ ~[a a]) |=(a/@ <(dec a)>)) 'a')
+~zod:dojo> (;~(cmp trip |=(a=@ ~[a a]) |=(a=@ <(dec a)>)) 'a')
 "96a"
-~zod:dojo> (;~(cmp trip |=(a/@ ~[a a]) |=(a/@ <(dec a)>)) 'acd')
+~zod:dojo> (;~(cmp trip |=(a=@ ~[a a]) |=(a=@ <(dec a)>)) 'acd')
 "96acd"
 ```

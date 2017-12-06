@@ -1,30 +1,31 @@
 ---
 navhome: /developer/docs/
-sort: 3
+next: true
+sort: 1
+title: ;: "semcol"
 ---
 
-# `:wad  ;:  "semcol"`
+# `;: "semcol"`
 
-`{$wad p/seed q/(list seed)}`: call a binary function as an n-ary function.
+`[%smcl p=seed q=(list seed)]`: call a binary function as an n-ary function.
 
 ## Expands to
 
-*Pseudocode*, `a`, `b`, `c`, ... as elements of `q`
+*Pseudocode*: `a`, `b`, `c`, ... as elements of `q`:
+
+Regular form:
 
 ```
-:call(p a :call(p b :call(p c ...)))
+%-(p a %-(p b %-(p c ...)))
+```
+
+Irregular form:
+
+```
+(p a (p b (p c ...)))
 ```
 
 ### Compiler macro
-
-```
-:loop
-:ifno  q  !!
-:ifno  t.q  !!
-:ifno  t.t.q
-  :call(p i.q i.t.q)
-:call(p i.q :moar(q t.q))
-```
 
 ```
 |-
@@ -42,13 +43,6 @@ Regular: *1-fixed*, then *running*.
 Irregular: `:(add a b c)` is `;:(add a b c)`.
 
 ## Examples
-
-```
-~zod:dojo> (add 3 (add 4 5))
-12
-~zod:dojo> :wad(add 3 4 5)
-12
-```
 
 ```
 ~zod:dojo> (add 3 (add 4 5))

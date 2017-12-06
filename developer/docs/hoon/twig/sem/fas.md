@@ -1,17 +1,14 @@
 ---
 navhome: /developer/docs/
 sort: 4
+title: ;/ "semfas"
 ---
 
-# `:nub  ;/  "semfas"`
+# `;/ "semfas"`
 
-`{$nub p/seed}`: tape as XML element.
+`[%smfs p=seed]`: tape as XML element.
 
 ## Expands to
-
-```
-:conl(%$ :conl(%$ p))
-```
 
 ```
 ~[%$ ~[%$ 'p']]
