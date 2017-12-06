@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 6
+next: true
+sort: 4
+title: ^~ "ketsig"
 ---
 
-# `:burn  ^~  "ketsig"`
+# `^~ "ketsig"`
 
-`{$burn p/seed}`: fold constant at compile time.
+`[%ktsg p=seed]`: fold constant at compile time.
 
 ## Produces
 
@@ -24,9 +26,3 @@ Regular: *1-fixed*.
 [%1 p=42]
 ```
 
-```
-~zod:dojo> (make ':loop(42)')
-[%8 p=[%1 p=[1 42]] q=[%9 p=2 q=[%0 p=1]]]
-~zod:dojo> (make ':burn(:loop(42))')
-[%1 p=42]
-```

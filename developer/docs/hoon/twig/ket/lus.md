@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 1
+next: true
+sort: 2
+title: ^+ "ketlus"
 ---
 
-# `:like  ^+  "ketlus"`
+# `^+ "ketlus"`
 
-`{$like p/seed q/seed}`: typecast by example (seed).
+`[%ktls p=seed q=seed]`: typecast by example (seed).
 
 ## Produces
 
@@ -17,11 +19,6 @@ within the span of `p`.  Otherwise, `nest-fail`.
 Regular: *2-fixed*.
 
 ## Examples
-
-```
-~zod:dojo> :like('text' %a)
-'a'
-```
 
 ```
 ~zod:dojo> ^+('text' %a)

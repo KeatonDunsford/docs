@@ -1,11 +1,12 @@
 ---
 navhome: /developer/docs/
-sort: 4
+sort: 6
+title: ^? "ketwut"
 ---
 
-# `:lead  ^?  "ketwut"`
+# `^? "ketwut"`
 
-`{$lead p/seed}`: convert any core to a lead core (bivariant).
+`[%ktwt p=seed]`: convert any core to a lead core (bivariant).
 
 ## Produces
 
@@ -20,7 +21,7 @@ Regular: *1-fixed*.
 A lead core is an opaque generator; the payload can't be read or 
 written.
 
-Theorem: if span `x` nests within span `a`, a lead core producing
+Theorem: if type `x` nests within type `a`, a lead core producing
 `x` nests within a lead core producing `a`.
 
 Informally, a more specific generator can be used as a less
@@ -29,13 +30,6 @@ specific generator.
 ## Examples
 
 The prettyprinter shows the core metal (`.` gold, `?` lead):
-
-```
-~zod:dojo> :gate(@ 1)
-<1.gcq [@  @n <250.yur 41.wda 374.hzt 100.kzl 1.ypj %151>]>
-~zod:dojo> :lead(:gate(@ 1))
-<1?gcq [@  @n <250.yur 41.wda 374.hzt 100.kzl 1.ypj %151>]>
-```
 
 ```
 ~zod:dojo> |=(@ 1)

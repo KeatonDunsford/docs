@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 5
+title: ^| "ketbar"
 ---
 
-# `:iron  ^|  "ketbar"`
+# `^| "ketbar"`
 
-`{$iron p/seed}`: convert a gold core to an iron core (contravariant).
+`[%ktbr p=seed]`: convert a gold core to an iron core (contravariant).
 
 ## Produces
 
@@ -19,8 +21,8 @@ Regular: *1-fixed*.
 
 An iron core is an opaque function (gate or door).
 
-Theorem: if span `x` nests within span `a`, and span `y` nests
-within span `b`, a core accepting `b` and producing `x` nests
+Theorem: if type `x` nests within type `a`, and type `y` nests
+within type `b`, a core accepting `b` and producing `x` nests
 within a iron core accepting `y` and producing `a`.
 
 Informally, a function fits an interface if the function has a
@@ -30,13 +32,6 @@ interface.
 ## Examples
 
 The prettyprinter shows the core metal (`.` gold, `|` iron):
-
-```
-~zod:dojo> :gate(@ 1)
-<1.gcq [@  @n <250.yur 41.wda 374.hzt 100.kzl 1.ypj %151>]>
-~zod:dojo> :iron(:gate(@ 1))
-<1|gcq [@  @n <250.yur 41.wda 374.hzt 100.kzl 1.ypj %151>]>
-```
 
 ```
 ~zod:dojo> |=(@ 1)

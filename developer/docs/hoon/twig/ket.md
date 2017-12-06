@@ -7,10 +7,11 @@ title: Cast ^ ("ket")
 
 # Cast `^` ("ket")
 
-`$cast`, `$like`, and `$name` let us adjust spans without
-violating type constraints.
+[`^-` ("kethep")](./hep/), [`^+` ("ketlus")](./lus/), and 
+[`^=` ("kettis")](./tis/) let us adjust types without violating type 
+constraints.
 
-The `nest` algorithm which tests span subtyping is conservative;
+The `nest` algorithm which tests subtyping is conservative;
 it never allows invalid nests, it sometimes rejects valid nests.
 
 ## Twigs
