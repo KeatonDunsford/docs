@@ -1,7 +1,7 @@
 ---
 navhome: /docs
 next: true
-sort: 7
+sort: 10
 title: |~ "barsig"
 ---
 

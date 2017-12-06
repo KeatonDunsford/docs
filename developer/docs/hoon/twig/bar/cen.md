@@ -1,7 +1,7 @@
 ---
 navhome: /developer/docs/
 next: true
-sort: 2
+sort: 1
 title: |% "barcen"
 ---
 

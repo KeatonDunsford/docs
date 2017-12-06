@@ -1,7 +1,7 @@
 ---
 navhome: /developer/docs/
 next: true
-sort: 9
+sort: 2
 title: |= "bartis"
 ---
 
