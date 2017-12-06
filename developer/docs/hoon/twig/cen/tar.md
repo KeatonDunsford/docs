@@ -7,7 +7,7 @@ title: %* "centar"
 
 # `%* "centar"`
 
-`{$cntr p/wing q/twig r/(list (pair wing seed))}`: make
+`[%cntr p=wing q=twig r=(list (pair wing seed))]`: make
 with arbitrary twig.
 
 ## Expands to

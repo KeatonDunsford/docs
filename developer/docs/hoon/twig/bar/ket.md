@@ -1,12 +1,13 @@
 ---
 navhome: /docs
-sort: 7
-title: |^  "barket"
+next: true
+sort: 6
+title: |^ "barket"
 ---
 
-# `|^  "barket"`
+# `|^ "barket"`
 
-`{$brkt p/twig q/(map term foot)}`: form a core with battery and
+`[%brkt p=twig q=(map term foot)]`: form a core with battery and
 anonymous arm `$` and kick it. 
 
 ## Expands to

@@ -23,7 +23,7 @@ Irregular: `_foo` is `$_(foo)`.
 
 ## Discussion
 
-A `$_` ("buccab") discards the sample it's supposedly normalizing, 
+`$_` ("buccab") discards the sample it's supposedly normalizing 
 and produces its *example* instead.
 
 ## Examples

@@ -1,12 +1,12 @@
 ---
 navhome: /docs
 sort: 9
-title: |?  "barwut"
+title: |? "barwut"
 ---
 
-# `|?  "barwut"`
+# `|? "barwut"`
 
-`{$brwt p/seed}`: form a lead trap.
+`[%brwt p=seed]`: form a lead trap.
 
 ## Expands to
 

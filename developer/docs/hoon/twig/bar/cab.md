@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 5
-title: |_  "barcab"
+next: true
+sort: 1
+title: |_ "barcab"
 ---
 
-# `|_  "barcab"` 
+# `|_ "barcab"` 
 
-`{$brcb p/moss q/(map term foot)}`: form a door, a many-armed core
+`[%brcb p=moss q=(map term foot)]`: form a door, a many-armed core
 with a sample.
 
 ## Expands to
@@ -41,7 +42,7 @@ is an irregular form for `%~($ foo bar)`, ["censig"](../../cen/sig).
 A trivial door:
 
 ```
-/~zod:dojo> =mol  |_  a/@ud
+/~zod:dojo> =mol  |_  a=@ud
                   ++  succ  +(a)
                   ++  prev  (dec a)
                   --

@@ -25,7 +25,7 @@ Regular: *2-fixed*.
 ## Examples
 
 ```
-~zod:dojo> =a $%([%foo p=@ud q=@ud] [$bar p=@ud])
+~zod:dojo> =a $%([%foo p=@ud q=@ud] [%bar p=@ud])
 
 ~zod:dojo> =b $^([a a] a)
 

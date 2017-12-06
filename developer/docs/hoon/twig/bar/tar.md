@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 6
-title: |*  "bartar"
+next: true
+sort: 8
+title: |* "bartar"
 ---
 
-# `|*  "bartar"` 
+# `|* "bartar"` 
 
-`{$brtr p/moss q/seed}`: form a gill, a wet one-armed 
+`[%brtr p=moss q=seed]`: form a gill, a wet one-armed 
 core with sample.
 
 ## Expands to
@@ -44,8 +45,8 @@ with `$()`.
 Wet and dry gates in a nutshell:
 
 ```
-~zod:dojo> =foo |=({a/* b/*} [b a])
-~zod:dojo> =bar |*({a/* b/*} [b a])
+~zod:dojo> =foo |=([a=* b=*] [b a])
+~zod:dojo> =bar |*([a=* b=*] [b a])
 ~zod:dojo> (foo %cat %dog)
 [6.778.724 7.627.107]
 ~zod:dojo> (bar %cat %dog)

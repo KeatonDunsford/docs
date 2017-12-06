@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 3
-title: |.  "bardot"
+next: true
+sort: 4
+title: |. "bardot"
 ---
 
-# `|.  "bardot"`
+# `|. "bardot"`
 
-`{$brdt p/seed}`: form a trap, a core with one arm `$`.
+`[%brdt p=seed]`: form a trap, a core with one arm `$`.
 
 ## Expands to
 

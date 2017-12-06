@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 1
-title: |%  "barcen"
+next: true
+sort: 2
+title: |% "barcen"
 ---
 
-# `|%  "barcen"`
+# `|% "barcen"`
 
-Form a core `{battery payload}` with subject as the payload.
+Form a core `[battery payload]` with subject as the payload.
 
 ## Produces
 
@@ -30,7 +31,7 @@ A trivial core:
 ~zod:dojo> =foo  =+  x=58
                  |%
                  ++  n  (add 42 x)
-                 ++  g  |=  b/@
+                 ++  g  |=  b=@
                         (add b n)
                  --
 ~zod:dojo> n.foo

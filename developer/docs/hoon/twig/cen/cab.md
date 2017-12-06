@@ -7,7 +7,7 @@ title: %_ "cencab"
 
 # `%_ "cencab"`
 
-`{$cncb p/wing q/(list (pair wing seed))}`: take a wing with changes,
+`[%cncb p=wing q=(list (pair wing seed))]`: take a wing with changes,
 preserving type.
 
 ## Expands to

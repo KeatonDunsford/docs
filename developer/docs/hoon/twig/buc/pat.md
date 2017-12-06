@@ -30,7 +30,7 @@ Regular form: *2-fixed*.
 Example:
 
 ```
-~zod:dojo> =a $@(%foo $:(p=$bar q=@ud))
+~zod:dojo> =a $@(%foo $:(p=%bar q=@ud))
 
 ~zod:dojo> (a %foo)
 %foo

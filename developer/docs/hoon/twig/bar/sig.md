@@ -1,12 +1,13 @@
 ---
 navhome: /docs
-sort: 10
-title: |~  "barsig"
+next: true
+sort: 7
+title: |~ "barsig"
 ---
 
-# `|~  "barsig"`
+# `|~ "barsig"`
 
-`{$brsg p/moss q/seed}`: form an iron gate.
+`[%brsg p=moss q=seed]`: form an iron gate.
 
 ## Expands to
 
@@ -25,6 +26,6 @@ See [this discussion of core variance models](../../../advanced)
 ## Examples
 
 ```
-~zod:dojo> =>  ~  ^+(|~(a/@ *@) |=(a/* *@))
+~zod:dojo> =>  ~  ^+(|~(a=@ *@) |=(a=* *@))
 <1|usl {a/@ $~}>
 ```

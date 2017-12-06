@@ -31,7 +31,7 @@ layer (as seen in the expansion above) to apply a `$=`.
 ## Examples
 
 ```
-~zod:dojo> =a $=(p $foo)
+~zod:dojo> =a $=(p %foo)
 
 ~zod:dojo> (a %bar)
 p=%foo

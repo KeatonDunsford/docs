@@ -22,9 +22,9 @@ Regular: *2-fixed*.
 
 ## Discussion
 
-Since a `$-` ("buchep") is a `$_` ("buccab"), it is not useful for normalizing, just
-for typechecking.  In particular, the existence of `$-`'s does *not* let us send
-gates or other cores over the network!
+Since a `$-` ("buchep") is a [`$_` ("buccab")](../cab/), it is not useful for 
+normalizing, just for typechecking.  In particular, the existence of `$-`s does 
+*not* let us send gates or other cores over the network!
 
 ## Examples
 

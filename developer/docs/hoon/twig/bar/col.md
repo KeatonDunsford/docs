@@ -1,12 +1,13 @@
 ---
 navhome: /docs
-sort: 8
-title: |:  "barcol"
+next: true
+sort: 3
+title: |: "barcol"
 ---
 
-# `|:  "barcol"`
+# `|: "barcol"`
 
-`{$brcl p/seed q/seed}`: form a gate with burnt sample.
+`[%brcl p=seed q=seed]`: form a gate with burnt sample.
 
 ## Expands to
 

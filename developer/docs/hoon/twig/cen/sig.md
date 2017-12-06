@@ -7,7 +7,7 @@ title: %~ "censig"
 
 # `%~ "censig"`
 
-`{$cnsg p/wing q/seed r/seed}`: call with multi-armed door.
+`[%cnsg p=wing q=seed r=seed]`: call with multi-armed door.
 
 ## Expands to
 
@@ -29,14 +29,14 @@ Irregular: `~(a b c)` is `%~(a b c)`; `~(a b c d e)` is `%~(a b
 ## Discussion
 
 `%~` ("censig") is the general case of a function call, `%-` ("cenhep").  In
-both, we replace the sample (`+6`) of a core.  In `:call` the
-core is a gate and we pull the `$` arm, in `:open` the
+both, we replace the sample (`+6`) of a core.  In `%-` the
+core is a gate and we pull the `$` arm. In `%~` the
 core is a door and we can pull any of its arms.
 
-Most languages do not have cores, doors, or `:open`.  "Just
+Most languages do not have cores, doors, or `%~`.  "Just
 learn to step outside your linear, Western way of thinking."
 
 ## Examples
 
-See [`:door`](../../bar-core/cab-door).
+See [`|_`](../../bar/cab).
 

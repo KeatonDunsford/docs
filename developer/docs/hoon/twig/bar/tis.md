@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 2
-title: |=  "bartis"
+next: true
+sort: 9
+title: |= "bartis"
 ---
 
-# `|=  "bartis"` 
+# `|= "bartis"` 
 
-`{$brts p/moss q/seed}`: form a gate, a dry one-armed core with sample.
+`[%brts p=moss q=seed]`: form a gate, a dry one-armed core with sample.
 
 ## Expands to
 
@@ -33,7 +34,7 @@ A gate is a core with one arm named `$`, so, just as with
 A trivial gate:
 
 ```
-~zod:dojo> =foo |=(a/@ +(a))
+~zod:dojo> =foo |=(a=@ +(a))
 ~zod:dojo> (foo 20)
 21
 ```
@@ -41,7 +42,7 @@ A trivial gate:
 A slightly less trivial gate:
 
 ```
-~zod:dojo> =foo  |=  {a/@ b/@}
+~zod:dojo> =foo  |=  [a=@ b=@]
                  (add a b)
 ~zod:dojo> (foo 20 400)
 420

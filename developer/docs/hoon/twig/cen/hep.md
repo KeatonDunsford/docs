@@ -7,7 +7,7 @@ title: %- "cenhep"
 
 # `%- "cenhep"`
 
-`{$cnhp p/seed q/seed}`: call a gate (function).
+`[%cnhp p=seed q=seed]`: call a gate (function).
 
 ## Expands to
 
@@ -39,7 +39,7 @@ Hoon, this shared sample is likely to be pulled into a door.
 ## Examples
 
 ```
-~zod:dojo> =add-triple |=({a/@ b/@ c/@} :(add a b c))
+~zod:dojo> =add-triple |=([a=@ b=@ c=@] :(add a b c))
 ~zod:dojo> (add-triple 1 2 3)
 6
 ~zod:dojo> %-(add-triple [1 2 3])

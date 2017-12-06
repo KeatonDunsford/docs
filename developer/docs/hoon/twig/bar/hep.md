@@ -1,12 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 4
-title: |-  "barhep"
+next: true
+sort: 5
+title: |- "barhep"
 ---
 
-# `|-  "barhep"`
+# `|- "barhep"`
 
-`{$brhp p/seed}`: form a trap and kick ("*call*") it.
+`[%brhp p=seed]`: form a trap and kick ("*call*") it.
 
 ## Expands to
 
