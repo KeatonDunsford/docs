@@ -1,6 +1,7 @@
 ---
 navhome: /developer/docs/
-sort: 8
+next: true
+sort: 6
 title: Test ? ("wut")
 ---
 

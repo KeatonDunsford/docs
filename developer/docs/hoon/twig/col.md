@@ -1,5 +1,6 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 3
 title: Cell : ("col")
 ---

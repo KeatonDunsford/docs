@@ -1,6 +1,7 @@
 ---
 navhome: /developer/docs/
-sort: 5
+next: true
+sort: 7
 title: Core | "bar"
 ---
 

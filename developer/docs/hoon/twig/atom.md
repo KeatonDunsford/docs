@@ -1,6 +1,7 @@
 ---
 navhome: /developer/docs/
-sort: 1
+next: true
+sort: 2
 title: Atoms and strings
 ---
 

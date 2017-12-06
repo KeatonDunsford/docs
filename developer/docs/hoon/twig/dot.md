@@ -1,6 +1,7 @@
 ---
 navhome: /developer/docs/
-sort: 10
+next: true
+sort: 4
 title: Nock . ("dot")
 ---
 
