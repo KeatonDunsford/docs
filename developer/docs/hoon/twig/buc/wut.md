@@ -1,6 +1,7 @@
 ---
 navhome: /developer/docs/
-sort: 9
+next: true
+sort: 4
 title: $? "bucwut"
 ---
 
@@ -28,8 +29,9 @@ Irregular: `?(%foo %bar)` is `$?(%foo %bar)`.
 ## Discussion
 
 For a union of atoms, a `$?` ("bucwut") is fine.  For more complex nouns,
-always try to use a $% ("buccen"), `$@` ("bucpat") or `$^` ("bucket"), at 
-least if you expect your mold to be used as a normalizer.
+always try to use a [`$%` ("buccen")](../cen/), [`$@` ("bucpat")](../pat/) or 
+[`$^` ("bucket")](../ket/), at least if you expect your mold to be used as a 
+normalizer.
 
 ## Examples
 

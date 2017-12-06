@@ -1,13 +1,13 @@
 ---
 navhome: /developer/docs/
 next: true
-sort: 7
+sort: 6
 title: $@ "bucpat"
 ---
 
 # `$@ "bucpat"`
 
-`[%bcpt p=moss q=moss]`: mold which normalizes a union tagged by depth.
+`[%bcpt p=moss q=moss]`: mold which normalizes a union tagged by head depth (atom).
   
 ## Normalizes to
 

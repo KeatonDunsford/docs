@@ -20,7 +20,7 @@ title: $= "buctis"
 
 Regular: *2-fixed*.
 
-Irregular: `foo=,bar` is `$=(foo bar)`.
+Irregular (mold mode): `foo=bar` is `$=(foo bar)`.
 
 ## Discussion
 
@@ -32,6 +32,9 @@ layer (as seen in the expansion above) to apply a `$=`.
 
 ```
 ~zod:dojo> =a $=(p %foo)
+
+~zod:dojo> (a %foo)
+p=%foo
 
 ~zod:dojo> (a %bar)
 p=%foo

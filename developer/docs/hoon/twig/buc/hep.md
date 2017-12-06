@@ -1,7 +1,6 @@
 ---
 navhome: /developer/docs/
-next: true
-sort: 5
+sort: 10
 title: $- "buchep"
 ---
 

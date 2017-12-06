@@ -1,7 +1,7 @@
 ---
 navhome: /developer/docs/
 next: true
-sort: 4
+sort: 3
 title: $: "buccol"
 ---
 
@@ -26,7 +26,8 @@ Crashes if `p` is empty.
 
 Regular: *running*.
 
-Irregular: `,[a b c]` is `$:(a b c)`.
+Irregular (noun mode): `,[a b c]` is `$:(a b c)`.
+Irregular (mold mode): `[a b c]` is `$:(a b c)`.
 
 ## Examples
 

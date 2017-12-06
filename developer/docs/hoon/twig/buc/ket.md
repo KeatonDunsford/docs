@@ -1,13 +1,13 @@
 ---
 navhome: /developer/docs/
 next: true
-sort: 6
+sort: 7
 title: $^ "bucket"
 ---
 
 # `$^ "bucket"` 
 
-`[%bckt p=moss q=moss]`: mold which normalizes a union tagged by head depth.
+`[%bckt p=moss q=moss]`: mold which normalizes a union tagged by head depth (cell).
 
 ## Normalizes to
 
