@@ -1,17 +1,15 @@
 ---
 navhome: /developer/docs/
-sort: 6
+next: true
+sort: 2
+title: :_ "colcab"
 ---
 
-# `:scon  :_  "colcab"`
+# `:_ "colcab"`
 
-`{$scon p/seed q/seed}`; construct a cell, inverted.
+`[%clcb p=seed q=seed]`; construct a cell, inverted.
 
 ### Expands to
-
-```
-:cons(q p)
-```
 
 ```
 :-(q p)
@@ -22,11 +20,6 @@ sort: 6
 Regular: *2-fixed*.
 
 ### Examples
-
-```
-~zod:dojo> :scon(1 2)
-[2 1]
-```
 
 ```
 ~zod:dojo> :_(1 2)

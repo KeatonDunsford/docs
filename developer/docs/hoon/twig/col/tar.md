@@ -1,31 +1,23 @@
 ---
 navhome: /developer/docs/
-sort: 4
+next: true
+sort: 5
+title: :* "coltar"
 ---
 
-# `:conp  :*  "coltar"`
+# `:* "coltar"`
 
-`{$conp p/(list twig)}`: construct an n-tuple.
+`[%cltr p=(list twig)]`: construct an n-tuple.
 
 ## Expands to
 
-*Pseudocode*, `a`, `b`, `c`, ... as elements of `p`
+*Pseudocode*: `a`, `b`, `c`, ... as elements of `p`:
 
 ```
-:cons(a :cons(b :cons(c :cons(... z)))))
+:-(a :-(b :-(c :-(... z)))))
 ```
 
 ### Compiler macro
-
-```
-:loop
-:ifno  p
-  !!
-:ifno  t.p
-  i.p
-:cons  i.p
-:moar(p t.p)
-```
 
 ```
 |-
@@ -42,23 +34,7 @@ $(p t.p)
 Regular: *running*.
 
 ## Examples
-```
-/~zod:dojo> :conp(5 3 4 1 4 9 0 ~ 'a')
-[5 3 4 1 4 9 0 ~ 'a']
-/~zod:dojo> [5 3 4 1 4 9 0 ~ 'a']
-[5 3 4 1 4 9 0 ~ 'a']
-/~zod:dojo> :conp  5
-                   3
-                   4 
-                   1
-                   4
-                   9
-                   0
-                   ~
-                   'a'
-            ==
-[5 3 4 1 4 9 0 ~ 'a']
-```
+
 ```
 /~zod:dojo> :*(5 3 4 1 4 9 0 ~ 'a')
 [5 3 4 1 4 9 0 ~ 'a']
