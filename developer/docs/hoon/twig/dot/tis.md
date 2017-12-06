@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 4
+title: .= "dottis"
 ---
 
-# `:same  .=  "dottis"` 
+# `.=  "dottis"` 
 
-`{$same p/seed q/seed}`: test for equality with Nock `5`.
+`[%dtts p=seed q=seed]`: test for equality with Nock `5`.
 
 ## Produces
 
@@ -19,7 +21,7 @@ Irregular: `=(a b)` is `.=(a b)`.
 
 ## Discussion
 
-Like Nock equality, `:same` tests if two nouns are the same,
+Like Nock equality, `.=` ("dottis") tests if two nouns are the same,
 ignoring invisible pointer structure.  Because in a conventional
 noun implementation each noun has a lazy short hash, comparisons 
 are fast unless the hash needs to be computed, or we are comparing
@@ -29,14 +31,12 @@ is a common cause of performance bugs.)
 ## Examples
 
 ```
-~zod:dojo> :same(0 0)
+~zod:dojo> .=(0 0)
 %.y
-~zod:dojo> :same(1 2)
-%.n
-```
-```
 ~zod:dojo> =(0 0)
 %.y
+~zod:dojo> .=(1 2)
+%.n
 ~zod:dojo> =(1 2)
 %.n
 ```

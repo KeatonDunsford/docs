@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 3
+title: .+ "dotlus"
 ---
 
-# `:bump  .+  "dotlus"`
+# `.+ "dotlus"`
 
-`{$bump p/atom}`: increment an atom with Nock `4`.
+`[%dtls p=atom]`: increment an atom with Nock `4`.
 
 ## Produces
 
@@ -21,7 +23,7 @@ Irregular: `+(6)` is `.+(6)`.
 ## Examples
 
 ```
-~zod:dojo> :bump(6)
+~zod:dojo> .+(6)
 7
 ~zod:dojo> +(6)
 7

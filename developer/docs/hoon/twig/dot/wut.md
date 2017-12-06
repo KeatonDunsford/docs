@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 2 
+next: true
+sort: 2
+title: .? "dotwut"
 ---
 
-# `:deep  .?  "dotwut"`
+# `.? "dotwut"`
 
-`{$deep p/seed}`: test for cell or atom with Nock `3`.
+`[%dtwt p=seed]`: test for cell or atom with Nock `3`.
 
 ## Produces
 
@@ -18,15 +20,8 @@ Regular: *1-fixed*.
 ## Examples
 
 ```
-~zod:dojo> :deep(~)
+~zod:dojo> .?(42)
 %.n
-~zod:dojo> :deep([2 3])
-%.y
-```
-
-```
-~zod:dojo> .?(~)
-%.n
-~zod:dojo> .?([2 3])
+~zod:dojo> .?([42 43])
 %.y
 ```
