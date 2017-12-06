@@ -1,6 +1,7 @@
 ---
 navhome: /developer/docs/
-sort: 8
+next: true
+sort: 1
 title: %= "centis"
 ---
 

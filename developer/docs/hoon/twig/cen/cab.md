@@ -1,7 +1,6 @@
 ---
 navhome: /developer/docs/
-next: true
-sort: 1
+sort: 8
 title: %_ "cencab"
 ---
 
