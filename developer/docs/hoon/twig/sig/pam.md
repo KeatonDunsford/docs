@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 1
+title: ~& "sigpam"
 ---
 
-# `:dump  ~&  "sigpam"`
+# `~& "sigpam"`
 
-`{$dump p/seed q/seed}`: debugging printf.
+`[%sgpm p=seed q=seed]`: debugging printf.
 
 ## Expands to
 
@@ -22,13 +24,12 @@ Regular: *2-fixed*.
 ## Examples
 
 ```
-~zod:dojo> :dump('halp' ~)
+~zod:dojo> ~&('halp' ~)
 'halp'
 ~
-```
 
-```
-~zod:dojo> ~&('halp' ~)
+~zod:dojo> ~&  'halp' 
+           ~
 'halp'
 ~
 ```

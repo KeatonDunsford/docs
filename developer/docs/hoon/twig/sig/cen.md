@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 10
+title: ~% "sigcen"
 ---
 
-# `:fast  ~%  "sigcen"`
+# `~% "sigcen"`
 
-`{$fast p/term q/wing r/(list {term seed}) s/seed}`: jet registration.
+`[%sgcn p=term q=wing r=(list [term seed]) s=seed]`: jet registration.
 
 ## Expands to
 
@@ -23,7 +25,7 @@ between opening and closing `==`.
 
 ## Discussion
 
-`:fast` is for registering cores.  A registered core declares its
+`~%` ("sigcen" is for registering cores.  A registered core declares its
 formal identity to the interpreter, which may or may not be able
 to recognize and/or accelerate it.
 
@@ -48,7 +50,7 @@ general-purpose hotspot optimizer or "JIT"; or (c) merely a
 hotspot declaration for profiling.
 
 As always with hints, the programmer has no idea which of (a),
-(b), and (c) will be applied.  She should use `:fast`
+(b), and (c) will be applied.  She should use `~%`
 indiscriminately on all hotspots, bottlenecks, etc, real or
 suspected.
 
@@ -80,12 +82,12 @@ Here's the AES
       |%
       ++  en                                                ::  ECB enc
         ~/  %en
-        |=  {a/@I b/@H}  ^-  @uxH
+        |=  [a=@I b=@H]  ^-  @uxH
         =+  ahem
         (be & (ex a) b)
       ++  de                                                ::  ECB dec
         ~/  %de
-        |=  {a/@I b/@H}  ^-  @uxH
+        |=  [a=@I b=@H]  ^-  @uxH
         =+  ahem
         (be | (ix (ex a)) b)
       --

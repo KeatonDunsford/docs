@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 3
+next: true
+sort: 5
+title: ~_ "sigcab"
 ---
 
-# `:lurk  ~_  "sigcab"`
+# `~_ "sigcab"`
 
-`{$lurk p/seed q/seed}`: user-formatted tracing printf.
+`[%sgcb p=seed q=seed]`: user-formatted tracing printf.
 
 ## Expands to
 
@@ -22,13 +24,12 @@ Shows `p` in stacktrace if `q` crashes.
 ## Examples
 
 ```
-~zod:dojo> :lurk([%leaf "sample error message"] !!)
+~zod:dojo> ~_([%leaf "sample error message"] !!)
 "sample error message"
 ford: build failed
-```
 
-```
-~zod:dojo> ~_([%leaf "sample error message"] !!)
+~zod:dojo> ~_  [%leaf "sample error message"] 
+           !!
 "sample error message"
 ford: build failed
 ```

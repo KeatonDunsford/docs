@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 9
+next: true
+sort: 3
+title: ~! "sigzap"
 ---
 
-# `:peep  ~!  "sigzap"` 
+# `~! "sigzap"` 
 
-`{$peep p/seed q/seed}`: print type on compilation fail.
+`[%sgzp p=seed q=seed]`: print type on compilation fail.
 
 ## Expands to
 
@@ -13,7 +15,7 @@ sort: 9
 
 ## Convention
 
-If compilation of `q` fails, prints the span of `p` in the trace.
+If compilation of `q` fails, prints the type of `p` in the trace.
 
 ## Syntax
 
@@ -24,15 +26,13 @@ Regular: *2-fixed*.
 ```
 ~zod:dojo> a
 ! -find.a
-~zod:dojo> :peep('foo' a)
+
+~zod:dojo> ~!('foo' a)
 ! @t
 ! find.a
-```
 
-```
-~zod:dojo> a
-! -find.a
-~zod:dojo> ~!('foo' a)
+~zod:dojo> ~!  'foo' 
+           a
 ! @t
 ! find.a
 ```

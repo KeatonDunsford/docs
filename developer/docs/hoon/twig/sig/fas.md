@@ -1,18 +1,16 @@
 ---
 navhome: /developer/docs/
-sort: 11
+next: true
+sort: 9
+title: ~/ "sigfas"
 ---
 
-# `:funk  ~/  "sigfas"`
+# `~/ "sigfas"`
 
-`{$funk p/term q/seed}`: jet registration for gate with
+`[%sgfs p=term q=seed]`: jet registration for gate with
 registered context.
 
 ## Expands to
-
-```
-:fast(p +7 ~ q)
-```
 
 ```
 ~%(p +7 ~ q)
@@ -28,7 +26,7 @@ From the kernel:
 ```
 ++  add
   ~/  %add
-  |=  {a/@ b/@}
+  |=  [a=@ b=@]
   ^-  @
   ?:  =(0 a)  b
   $(a (dec a), b +(b))

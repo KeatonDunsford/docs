@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 12
+next: true
+sort: 8
+title: ~$ "sigbuc"
 ---
 
-# `:poll  ~$  "sigbuc"`
+# `~$ "sigbuc"`
 
-`{$poll p/term q/seed}`: profiling hit counter.
+`[%sgbc p=term q=seed]`: profiling hit counter.
 
 ## Expands to
 
@@ -20,11 +22,6 @@ If profiling is on, adds 1 to the hit counter for `p`.
 Regular: *2-fixed*.
 
 ## Examples
-
-```
-~zod:dojo> :poll(%foo 3)
-3
-```
 
 ```
 ~zod:dojo> ~$(%foo 3)

@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 5
+next: true
+sort: 11
+title: ~> "siggar"
 ---
 
-# `:hint  ~>  "siggar"`
+# `~> "siggar"`
 
-`{$hint p/$@(term {p/term q/seed}) q/seed}`: raw hint, applied
+`[%sggr p=$@(term [p=term q=seed]) q=seed]`: raw hint, applied
 to computation.
 
 ## Expands to
@@ -24,11 +26,6 @@ Hints are all conventions at the interpreter level.
 ## Examples
 
 ```
-~zod:dojo> :hint(%a 42)
-42
-```
-
-```
 ~zod:dojo> ~>(%a 42)
 42
 ```
@@ -36,15 +33,9 @@ Hints are all conventions at the interpreter level.
 Running the compiler:
 
 ```
-~zod:dojo> (make ':hint(%a 42)')
-[%10 p=97 q=[%1 p=42]]
-~zod:dojo> (make ':hint(%a.+(2) 42)')
-[%10 p=[p=97 q=[%4 p=[%1 p=2]]] q=[%1 p=42]]
-```
-
-```
 ~zod:dojo> (make '~>(%a 42)')
 [%10 p=97 q=[%1 p=42]]
+
 ~zod:dojo> (make '~>(%a.+(2) 42)')
 [%10 p=[p=97 q=[%4 p=[%1 p=2]]] q=[%1 p=42]]
 ```

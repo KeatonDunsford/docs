@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 4
+next: true
+sort: 2
+title: ~? "sigwut"
 ---
 
-# `:warn  ~?  "sigwut"`
+# `~? "sigwut"`
 
-`{$warn p/seed q/seed r/seed}`: conditional debug printf.
+`[%sgwt p=seed q=seed r=seed]`: conditional debug printf.
 
 ## Expands to
 
@@ -22,17 +24,21 @@ Regular: *4-fixed*.
 ## Examples
 
 ```
-~zod:dojo> :warn((gth 1 2) 'oops' ~)
-~
-~zod:dojo> :warn((gth 1 0) 'oops' ~)
-'oops'
-~
-```
-
-```
 ~zod:dojo> ~?((gth 1 2) 'oops' ~)
 ~
+
 ~zod:dojo> ~?((gth 1 0) 'oops' ~)
+'oops'
+~
+
+~zod:dojo> ~?  (gth 1 2) 
+             'oops' 
+           ~
+~
+
+~zod:dojo> ~?  (gth 1 0) 
+             'oops'
+           ~
 'oops'
 ~
 ```
