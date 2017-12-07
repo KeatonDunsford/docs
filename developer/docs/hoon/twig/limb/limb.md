@@ -1,18 +1,19 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 1
-
+title: Limb
 ---
 
-# `:limb`
+# Limb
 
-`{$limb p/(each @ud {p/@ud q/@tas})}`: attribute of subject.
+`[%limb p=(each @ud [p=@ud q=@tas])]`: attribute of subject.
 
 ### Produces
 
-If `p` matches `{$& p/@ud}`, slot `p.p` of the subject.
+If `p` matches `[%& p=@ud]`, slot `p.p` of the subject.
 
-If `p` matches `{$| p/@ud q/@tas}`, the `p`th match for `q`,
+If `p` matches `[%| p=@ud q=@tas]`, the `p`th match for `q`,
 using the search traverse below.
 
 ### Syntax
@@ -48,10 +49,10 @@ attribute -- computation or subtree, "synthesized" or "natural"
 We search the subject span headfirst, depth-first, and pre-order.
 If we descend to a `$face` span whose label matches the limb
 symbol, the descent address is a leg.   The span is the span
-beneath the label.  But if the `$face` label differs, the search
+beneath the label.  But if the `%face` label differs, the search
 skips this whole subtree.
 
-If we descend into a `$core` span in which the limb symbol is an
+If we descend into a `%core` span in which the limb symbol is an
 arm, we produce that arm.  If the limb symbol is not bound, we
 descend into the payload (data) of the core.
 
@@ -61,7 +62,7 @@ through" an overriding label.  No label anywhere is inaccessible.
 
 ### Examples
 
-The `:dojo` prompt gives you a subject with a decent namespace.
+The Dojo prompt gives you a subject with a decent namespace.
 Try
 
 ```
@@ -70,7 +71,7 @@ Try
 ```
 
 You can also add variables to the subject, then use them.  (Note
-that `=variable value` is not Hoon (language) syntax; it's `:dojo`
+that `=variable value` is not Hoon (language) syntax; it's Dojo
 (shell) syntax.)
 
 ```

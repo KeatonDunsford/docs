@@ -1,16 +1,17 @@
 ---
 navhome: /developer/docs/
 sort: 2
+title: Wing
 ---
 
-# `:wing`
+# Wing
 
-`{$wing p/(list limb)`; a limb search path.
+`[%wing p=(list limb)]`; a limb search path.
 
 ### Produces
 
 If `p` is null, the subject at leg `1`.  Otherwise, let `x` be
-the `$wing` of `t.p`.  `x` is either an arm or a leg.  We compute
+the `%wing` of `t.p`.  `x` is either an arm or a leg.  We compute
 limb `i.p` on some subject leg `s`, where:
 
 If `x` is a leg/slot number, `s` is `x`.
