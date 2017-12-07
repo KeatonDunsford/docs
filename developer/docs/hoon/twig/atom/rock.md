@@ -1,12 +1,12 @@
 ---
 navhome: /developer/docs/
 sort: 2
-
+title: Rock
 ---
 
-# `:rock`
+# Rock
 
-`{$rock p/term q/@}`; a constant, cold atom.
+`[%rock p=term q=@]`; a constant, cold atom.
 
 ### Produces
 
@@ -14,7 +14,7 @@ A cold (fixed) atom `q` with aura `a`.
 
 ### Syntax
 
-Irregular: any warm atom (`:sand`) form, prefixed with `%`.
+Irregular: any warm atom [(`%sand`)](../sand/) form, prefixed with `%`.
 
 Irregular: `%foo`, `@tas`, symbol.  Character constraints: `a-z`
 lowercase to start, `a-z` or `0-9` thereafter, with infix 

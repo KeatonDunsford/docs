@@ -1,12 +1,12 @@
 ---
 navhome: /developer/docs/
 sort: 3
-
+title: Knit
 ---
 
-# `:knit`
+# Knit
 
-`{$knit p/(list (each @t seed))}`: text string with interpolation.
+`[%knit p=(list (each @t seed))]`: text string with interpolation.
 
 ### Produces
 

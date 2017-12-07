@@ -1,12 +1,12 @@
 ---
 navhome: /developer/docs/
 sort: 1
-
+title: Sand
 ---
 
-# `:sand`
+# Sand
 
-`{$sand p/term q/@}`; a constant, warm atom.
+`[%sand p=term q=@]`; a constant, warm atom.
 
 ### Produces
 
