@@ -1,15 +1,17 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 1
+title: !! "zapzap"
 ---
 
-# `:fail  !!  "zapzap"`
+# `!! "zapzap"`
 
-`{$fail $~}`: crash.
+`[%zpzp ~]`: crash.
 
 ## Produces
 
-Nothing.  Always crashes, with span `%void`.
+Nothing.  Always crashes, with type `%void`.
 
 ## Syntax
 
@@ -22,11 +24,6 @@ Nothing.  Always crashes, with span `%void`.
 ## Examples
 
 ```
-~zod:dojo> :fail
-! exit
-```
-
-```
 ~zod:dojo> !!
-! exit
+ford: build failed
 ```

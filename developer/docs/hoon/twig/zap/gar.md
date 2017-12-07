@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 2
+next: true
+sort: 3
+title: !> "zapgar"
 ---
 
-# `:wrap  !>  "zapgar"`
+# `!> "zapgar"`
 
-`{$wrap p/seed}`: wrap a noun in its span.
+`[%zpgr p=seed]`: wrap a noun in its span.
 
 ## Produces
 
@@ -18,14 +20,9 @@ Regular: *1-fixed*.
 ## Discussion
 
 In Hoon, dynamic type is static type compiled at runtime.  This
-span-noun cell is generally called a `vase`.
+type-noun cell is generally called a `vase`.
 
 ## Examples
-
-```
-~zod:dojo> :wrap(1)
-[p=#t/@ud q=1]
-```
 
 ```
 ~zod:dojo> !>(1)

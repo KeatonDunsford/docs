@@ -1,31 +1,23 @@
 ---
 navhome: /developer/docs/
 sort: 4
+title: !? "zapwut"
 ---
 
-# `:need  !?  "zapwut"`
+# `!? "zapwut"`
 
-`{$need p/@ q/seed}`: restrict Hoon version.
+`[%zpwt p=@ q=seed]`: restrict Hoon version.
 
 ## Produces
 
 `q`, if `p` is greater than or equal to the Hoon kelvin version.
-(Versions count down; the current version is 150.)
+(Versions count down; the current version is 143.)
 
 ## Syntax
 
 Regular: *2-fixed*.
 
 ## Examples
-
-```
-~zod:dojo> :need(264 (add 2 2))
-4
-~zod:dojo> :need(164 (add 2 2))
-4
-~zod:dojo> :need(64 (add 2 2))
-! exit
-```
 
 ```
 ~zod:dojo> !?(264 (add 2 2))
