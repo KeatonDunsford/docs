@@ -1,30 +1,23 @@
 ---
 navhome: /developer/docs/
-sort: 8
+next: true
+sort: 5
+title: ?& "wutpam"
 ---
 
-# `:and  ?&  "wutpam"`
+# `?& "wutpam"`
 
-`{$and p/(list seed)}`: logical and.
+`[%wtpm p=(list seed)]`: logical and.
 
 ## Expands to
 
-*Pseudocode*, `a`, `b`, `c`, ... as elements of `p`
+*Pseudocode*: `a`, `b`, `c`, ... as elements of `p`:
 
 ```
-:lest(a | :lest(b | :lest(c | :lest(... :lest(z | &)))))
+?.(a | ?.(b | ?.(c | ?.(... ?.(z | &)))))
 ```
 
 ### Compiler macro
-
-```
-:loop
-:ifno  p  
-  &
-:lest  i.p
-  |
-:moar(p t.p)
-```
 
 ```
 |-
@@ -44,11 +37,9 @@ Irregular: `&(foo bar baz)` is `?&(foo bar baz)`.
 ## Examples
 
 ```
-~zod:dojo> :and(=(6 6) =(42 42))
-%.y
-```
-
-```
 ~zod:dojo> &(=(6 6) =(42 42))
 %.y
+
+~zod:dojo> &(=(6 7) =(42 43))
+%.n
 ```

@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 6
+next: true
+sort: 8
+title: ?= "wuttis"
 ---
 
-# `:fits  ?=  "wuttis"`
+# `?= "wuttis"`
 
-`{$fits p/moss q/wing}`: test pattern match.
+`[%wtts p=moss q=wing]`: test pattern match.
 
 ## Produces
 
@@ -18,7 +20,7 @@ Regular: *2-fixed*.
 
 ## Discussion
 
-`:fits` is not as powerful as it might seem.  For instance, it
+`?=` ("wuttis") is not as powerful as it might seem.  For instance, it
 can't generate a loop -- you cannot (and should not) use it to 
 test whether a `*` is a `(list @)`.  Nor can it validate atomic 
 auras.
@@ -26,8 +28,8 @@ auras.
 Patterns should be as weak as possible.  Unpack one layer of
 union at a time.  Don't confirm things the type system knows.
 
-For example, when matching a book containing a page `{$foo p/@
-q/{@ @}}`, the proper pattern is `{$foo *}`.  You have one
+For example, when matching a book containing a page `[%foo p=@
+q=[@ @]]`, the proper pattern is `[%foo *]`.  You have one
 question, which is whether the head of the noun is `%foo`.
 
 A common error is `find.$`, meainng `p` is not a mold.
@@ -36,12 +38,6 @@ A common error is `find.$`, meainng `p` is not a mold.
 
 ```
 ~zod:dojo> =bar [%foo %bar %baz]
-~zod:dojo> :fits({$foo *} bar)
-%.y
-```
-
-```
-~zod:dojo> =bar [%foo %bar %baz]
-~zod:dojo> ?=({$foo *} bar)
+~zod:dojo> ?=([%foo *] bar)
 %.y
 ```

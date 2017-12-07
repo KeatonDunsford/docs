@@ -1,19 +1,15 @@
 ---
 navhome: /developer/docs/
-sort: 11
+next: true
+sort: 3
+title: ?> "wutgar"
 ---
 
 # `:sure  ?>  "wutgar"`
 
-`{$sure p/seed q/seed}`: positive assertion.
+`[%wtgr p=seed q=seed]`: positive assertion.
 
 ## Expands to
-
-```
-:lest  p
-  !!
-q
-```
 
 ```
 ?.(p !! q)
@@ -26,11 +22,9 @@ Regular: *2-fixed*.
 ## Examples
 
 ```
-~zod:dojo> :sure(=(3 3) %foo)
-%foo
-```
-
-```
 ~zod:dojo> ?>(=(3 3) %foo)
 %foo
+
+~zod:dojo> ?>(=(3 4) %foo)
+ford: build failed
 ```

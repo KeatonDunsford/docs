@@ -1,19 +1,15 @@
 ---
 navhome: /developer/docs/
-sort: 10
+next: true
+sort: 4
+title: ?< "wutgal"
 ---
 
-# `:deny  ?<  "wutgal"`
+# `?< "wutgal"`
 
-`{$deny p/seed q/seed}`: negative assertion.
+`[%wtgl p=seed q=seed]`: negative assertion.
 
 ## Expands to
-
-```
-:if  p
-  !!
-q
-```
 
 ```
 ?:(p !! q)
@@ -26,12 +22,10 @@ Regular: *2-fixed*.
 ## Examples
 
 ```
-~zod:dojo> :deny(=(3 4) %foo)
-%foo
-```
-
-```
 ~zod:dojo> ?<(=(3 4) %foo)
 %foo
+
+~zod:dojo> ?<(=(3 3) %foo)
+ford: build failed
 ```
 

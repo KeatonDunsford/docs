@@ -1,30 +1,23 @@
 ---
 navhome: /developer/docs/
-sort: 9
+next: true
+sort: 6
+title: ?| "wutbar"
 ---
 
-# `:or  ?|  "wutbar"` 
+# `?| "wutbar"` 
 
-`{$or p/(list seed)}`: logical or.
+`[%wtbr p=(list seed)]`: logical or.
 
 ## Expands to
 
-*Pseudocode*, `a`, `b`, `c`, ... as elements of `p`
+*Pseudocode*: `a`, `b`, `c`, ... as elements of `p`:
 
 ```
-:if(a & :if(b & :if(c & :if(... :if(z & |)))))
+?:(a & ?:(b & ?:(c & ?:(... ?:(z & |)))))
 ```
 
 ### Compiler macro
-
-```
-:loop
-:ifno  p  
-  |
-:if  i.p
-  &
-:moar(p t.p)
-```
 
 ```
 |-
@@ -44,11 +37,9 @@ Irregular: `|(foo bar baz)` is `?|(foo bar baz)`.
 ## Examples
 
 ```
-~zod:dojo> :or(=(6 42) =(42 42))
-%.y
-```
-
-```
 ~zod:dojo> |(=(6 42) =(42 42))
 %.y
+
+~zod:dojo> |(=(6 42) =(42 43))
+%.n
 ```
