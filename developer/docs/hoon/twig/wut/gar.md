@@ -5,7 +5,7 @@ sort: 3
 title: ?> "wutgar"
 ---
 
-# `:sure  ?>  "wutgar"`
+# `?> "wutgar"`
 
 `[%wtgr p=seed q=seed]`: positive assertion.
 

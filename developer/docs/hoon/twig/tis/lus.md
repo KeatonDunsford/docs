@@ -21,7 +21,7 @@ Regular: *2-fixed*.
 
 ## Discussion
 
-`:pin` is the simplest way of "declaring a variable."
+`=+` ("tislus") is the simplest way of "declaring a variable."
 
 ## Examples
  
