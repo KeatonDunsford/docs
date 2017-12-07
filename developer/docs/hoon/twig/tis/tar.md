@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 11
+next: true
+sort: 9
+title: =* "tistar"
 ---
 
-# `:aka  =* "tistar"`
+# `=* "tistar"`
 
-`{$aka p/term q/seed r/seed}`: define an alias.
+`[%tstr p=term q=seed r=seed]`: define an alias.
 
 ## Produces
 
@@ -18,24 +20,10 @@ Regular: *3-fixed*.
 ## Discussion
 
 The difference between aliasing and pinning is that the subject
-noun stays the same; the alias is just recorded in its span.
+noun stays the same; the alias is just recorded in its type.
 `q` is calculated every time you use the `p` alias, of course.
 
 ## Examples
-
-```
-~zod:dojo>
-    :pin  a=1
-    :aka  b  a
-    [a b]
-[1 1]
-~zod:dojo>
-    :pin  a=1
-    :aka  b  a
-    :set  a  2
-    [a b]
-[2 2]
-```
 
 ```
 ~zod:dojo>
@@ -43,6 +31,7 @@ noun stays the same; the alias is just recorded in its span.
     =*  b  a
     [a b]
 [1 1]
+
 ~zod:dojo>
     =+  a=1
     =*  b  a

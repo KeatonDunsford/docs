@@ -18,13 +18,13 @@ The simplest way to change the subject is to compose two twigs,
 `p.x` and nock formula `q.x`.  Let `y` be `(mint p.x q)`.  Then
 their composition is `[p.y [7 q.x q.y]]`.
 
-This composition is the `$per` twig.  A close relative is `$pin`,
-which is `$per` over `[p .]`.  The new subject is a cell of `p`
-and the old subject.  `$pin` is the simplest Hoon equivalent of
+This composition is the `=>` ("tisgar") rune.  A close relative is 
+`=+` ("tislus"), which is `=>` over `[p .]`.  The new subject is a 
+cell of `p` and the old subject.  `=+` is the simplest Hoon equivalent of
 "declaring a variable" (introducing new data into the subject).
 
 Another way to change the subject is to mutate it.  With the
-`$set` twig, given a wing that resolves to a leg, we can write
+`=.` ("tisdot") rune, given a wing that resolves to a leg, we can write
 instead of reading, *installing* a new value at that leg.  Of
 course, we are creating a copy, not modifying the original.
 

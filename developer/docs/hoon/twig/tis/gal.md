@@ -1,17 +1,15 @@
 ---
 navhome: /developer/docs/
+next: true
 sort: 2
+title: =< "tisgal"
 ---
 
-# `:rap  =<  "tisgal"`
+# `=< "tisgal"`
 
-`{$rap p/seed q/seed}`: compose two twigs, inverted.
+`[%tsgl p=seed q=seed]`: compose two twigs, inverted.
 
 ## Expands to
-
-```
-:per(q p)
-```
 
 ```
 =>(q p)
@@ -21,15 +19,21 @@ sort: 2
 
 Regular: *2-fixed*.
 
-Irregular: `foo:bar` is `:rap(foo bar)`.
+Irregular: `foo:bar` is `=<(foo bar)`.
 
 ## Examples
 
 ```
-~zod:dojo> :rap(b [a=1 b=2 c=3])
+~zod:dojo> =<(b [a=1 b=2 c=3])
 2
+
+~zod:dojo> =<  b 
+           [a=1 b=2 c=3]
+2
+
 ~zod:dojo> b:[a=1 b=2 c=3]
 2
+
 ~zod:dojo> [. .]:(add 2 4)
 [6 6]
 ```

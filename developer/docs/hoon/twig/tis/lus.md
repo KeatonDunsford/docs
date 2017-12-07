@@ -1,17 +1,15 @@
 ---
 navhome: /developer/docs/
-sort: 3
+next: true
+sort: 4
+title: =+ "tislus"
 ---
 
-# `:pin  =+  "tislus"`
+# `=+ "tislus"`
 
-`{$pin p/seed q/seed}`: combine a new noun with the subject.
+`[%tsls p=seed q=seed]`: combine a new noun with the subject.
 
 ## Expands to
-
-```
-:per(:cons(p .) q)
-```
 
 ```
 =>([p .] q)
@@ -28,16 +26,7 @@ Regular: *2-fixed*.
 ## Examples
  
 ```
-~zod:dojo> =foo  :gate  a/@
-                 :pin  :name(b 1)
-                 :pin  :name(c 2)
-                 :(add a b c)
-~zod:dojo> (foo 5)
-8
-```
-
-```
-~zod:dojo> =foo  |=  a/@
+~zod:dojo> =foo  |=  a=@
                  =+  b=1
                  =+  c=2
                  :(add a b c)

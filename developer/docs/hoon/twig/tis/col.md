@@ -1,17 +1,15 @@
 ---
 navhome: /developer/docs/
-sort: 9
+next: true
+sort: 11
+title: =: "tiscol"
 ---
 
-# `:fix  =:  "tiscol"` 
+# `=: "tiscol"` 
 
-`{$fix p/(list (pair wing seed)) q/seed}`: change multiple legs in the subject.
+`[%tscl p=(list (pair wing seed)) q=seed]`: change multiple legs in the subject.
 
 ## Expands to
-
-```
-:per(:keep(. p) q)
-```
 
 ```
 =>(%_(. p) q)
@@ -22,15 +20,6 @@ sort: 9
 Regular: *jogging*, then *1-fixed*.
 
 ## Examples
-
-```
-~zod:dojo> :pin  a=[b=1 c=2]
-           :fix  c.a  4
-                 b.a  3
-               ==
-           a
-[b=3 c=4]
-```
 
 ```
 ~zod:dojo> =+  a=[b=1 c=2]

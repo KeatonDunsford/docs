@@ -1,11 +1,13 @@
 ---
 navhome: /developer/docs/
-sort: 12
+next: true
+sort: 3
+title: =~ "tissig"
 ---
 
-# `:tow  =~  "tissig"` 
+# `=~ "tissig"` 
 
-`{$tow p/(list twig)}`: compose many twigs.
+`[%tssg p=(list twig)]`: compose many twigs.
 
 ## Produces
 
@@ -18,23 +20,7 @@ Regular: *running*.
 ## Examples
 
 ```
-~zod:dojo> =foo :new  n/@
-                :rap  :tow  increment
-                            increment
-                            increment
-                            n
-                      ==
-                :core
-                ++  increment
-                  :loop  
-                  ..increment(n +(n))
-                --
-~zod:dojo> foo
-3
-```
-
-```
-~zod:dojo> =foo =|  n/@ 
+~zod:dojo> =foo =|  n=@ 
                 =<  =~  increment
                         increment
                         increment
