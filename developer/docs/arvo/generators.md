@@ -136,17 +136,17 @@ everything nicer. Since it's specific to `:ping`, let's put it in
 
 ```
 :-  %say
-|=  [^ {to=@p message=?($~ [text=@t $~])} $~}
+|=  [^ [to=@p message=?(~ [text=@t ~])] ~]
 [%ping-message to ?~(message 'howdy' text.message)]
 ```
 
-A couple of new things here. Firstly, `message=?($~ [text=@t $~])` should be 
+A couple of new things here. Firstly, `message=?(~ [text=@t ~])` should be 
 read as "the message is either null or a pair of text and null". Generator 
 argument lists are always null-terminated, which makes it convenient to accept 
 lists in tail position (which are particularly annoying without generators). 
 `?(a b)` is the irregular form of `$?(a b)`, which is a union type. Thus, 
 `?(a b)` means the type of anything that's in either `a` or `b`. Thus, in our 
-case, `?($~ {text/@t $~})` is either null or a pair of text and null.
+case, `?(~ [text=@t ~])` is either null or a pair of text and null.
 
 Secondly, `?~(a b c)` is a rune which means "if the `a` is null, do `b`, else 
 `c`". It is roughly equivalent to `?:(=(~ a) b c)`.
@@ -180,7 +180,7 @@ This causes `~sampel-sipnym` to print `[%receiving 'howdy']` and
 **Exercises**:
 
 -   Create a generator for `:sum` from
-    [State](/docs/arvo/state) so that you can run `:sum|add 5`
+    [State](/developer/docs/arvo/state) so that you can run `:sum|add 5`
     to add numbers to it.
 
 -   Create a generator for `:click` from [Web

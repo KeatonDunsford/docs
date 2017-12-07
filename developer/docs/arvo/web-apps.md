@@ -193,7 +193,7 @@ command line.
 
 # Frontend
 
-That's all that's needed for the backend. The frontend is just some "sail" html 
+That's all that's needed for the backend. The frontend is just some "Sail" html 
 (Hoon markup for XML) and javascript. Here's `/web/pages/examples/click.hoon`:
 
 ```

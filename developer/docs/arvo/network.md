@@ -22,12 +22,12 @@ need an app. Let's look at a very simple one, `echo.hoon`:
   ::                                                    ::  4 
 !:                                                      ::  5 
 |%                                                      ::  6 
-+=  move  {bone card}                                   ::  7 
-+=  card  $%  $~                                        ::  8 
++=  move  [bone card]                                   ::  7 
++=  card  $%  ~                                         ::  8 
           ==                                            ::  9 
 --                                                      ::  10
 ::                                                      ::  11
-|_  [bow=bowl:gall $~]                                  ::  12
+|_  [bow=bowl:gall ~]                                   ::  12
 ++  poke-noun                                           ::  13
   |=  non=*                                             ::  14
   ^-  [(list move) _+>.$]                               ::  15
@@ -74,7 +74,7 @@ but we'll get to the correct way later on.
 
 But what does `++poke-noun` produce? Recall that `^-` casts to a type. In this
 case, it's declaring that the end result (*product*) of the function 
-(`++poke-noun`'s *gate*) will be of type `{(list) _+>.$}`. But what does this 
+(`++poke-noun`'s *gate*) will be of type `[(list) _+>.$]`. But what does this 
 mean?
 
 The phrase to remember is "a list of moves and our state". Urbit is a message

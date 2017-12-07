@@ -7,7 +7,7 @@ title: HTTP requests and timers
 
 # Writing an HTTP request
 
-There's a variety of arvo services we haven't touched on yet. Let's figure out 
+There's a variety of Arvo services we haven't touched on yet. Let's figure out 
 how to make HTTP requests and set timers.
 
 Let's build an uptime-monitoring system. It'll ping a web service periodically 
@@ -24,23 +24,23 @@ and print out an error when the response code isn't 2xx. Here's
 |%                                                      ::  7
 +=  move  [bone card]                                   ::  8
 +=  card                                                ::  9
-  $%  [$hiss wire $~ $httr [$purl p=purl:eyre]]         ::  10
-      [$wait wire @da]                                  ::  11
+  $%  [%hiss wire ~ %httr [%purl p=purl:eyre]]          ::  10
+      [%wait wire @da]                                  ::  11
   ==                                                    ::  12
 +=  action                                              ::  13
-  $%  [$on $~]                                          ::  14
-      [$off $~]                                         ::  15
-      [$target p=cord]                                  ::  16
+  $%  [%on ~]                                           ::  14
+      [%off ~]                                          ::  15
+      [%target p=cord]                                  ::  16
   ==                                                    ::  17
 --                                                      ::  18
 |_  [bow=bowl:gall on=_| in-progress=_| target=@t]      ::  19
 ::                                                      ::  20
 ++  poke-atom                                           ::  21
   |=  url-or-command=@t                                 ::  22
-  ^-  (quip move +>)                                    ::  23
+  ^-  (quip move _+>)                                   ::  23
   =+  ^-  act=action                                    ::  24
-      ?:  ?=($on url-or-command)  [%on ~]               ::  25
-      ?:  ?=($off url-or-command)  [%off ~]             ::  26
+      ?:  ?=(%on url-or-command)  [%on ~]               ::  25
+      ?:  ?=(%off url-or-command)  [%off ~]             ::  26
       [%target url-or-command]                          ::  27
   ?-  -.act                                             ::  28
     $target  [~ +>.$(target p.act)]                     ::  29
@@ -72,7 +72,7 @@ and print out an error when the response code isn't 2xx. Here's
   :_  +>.$                                              ::  55 
   [ost.bow %wait /timer (add ~s10 now.bow)]~            ::  56 
 ++  wake-timer                                          ::  57 
-  |=  [wir=wire $~]  ^-  (quip move +>)                 ::  58 
+  |=  [wir=wire ~]  ^-  (quip move _+>)                 ::  58 
   ?:  on                                                ::  59 
     :_  +>.$                                            ::  60 
     :~  :*  ost.bow                                     ::  61 
@@ -93,7 +93,7 @@ and print out an error when the response code isn't 2xx. Here's
 There's some fancy stuff going on here. We'll go through it line by line, 
 though.
 
-There's two kinds of cards we're sending to arvo. A `%hiss` move tells `%eyre` 
+There's two kinds of cards we're sending to Arvo. A `%hiss` move tells `%eyre` 
 to make an HTTP request. It expects a `(unit iden)`, which will be null here 
 because we aren't doing any authentication; a mark, in this case the http 
 request mark `&httr`; and some data in the form of a `cage`, which is a 
@@ -122,7 +122,7 @@ When you send this request, you can expect a `%sigh` with the response, which
 we handle later on in `++sigh-httr`.
 
 For `%wait`, you just pass a [`@da`](/../../hoon/library/3c/) (absolute date), 
-and arvo will produce a `%wake` when the time comes.
+and Arvo will produce a `%wake` when the time comes.
 
 > A timer is guaranteed to not be triggered before the given
 > time, but it's currently impossible to guarantee the timer will be
@@ -193,7 +193,7 @@ Check out how we could produce the same list of moves using wide form:
 > shortcut for creating a list of a single element. It's part of a small 
 > family of creating a list of a single element. It's part of a small family 
 > of such shortcuts. `~[a b c]` is `[a b c ~]`, `[a b c]~` is `[[a b c] ~]` 
-> and `\`[a bc]` is `[~ a b c]`. These may be mixed and matched to create 
+> and `\`[a b c]` is `[~ a b c]`. These may be mixed and matched to create 
 > various convoluted structures and emojis. The problem with this code is that 
 > it extends wider than 55 columns, which is beyond what is recommended.
 
@@ -208,7 +208,7 @@ present time.
 If we got a bad status code, then we print out the entire response and start 
 the timer again.
 
-After ten seconds, arvo will give us a `%wake` event, which will be handled in 
+After ten seconds, Arvo will give us a `%wake` event, which will be handled in 
 `++wake-timer`. If we're still supposed to keep monitoring, we send the same 
 HTTP request as before. Otherwise, we set `in-progress` to false.
 
@@ -217,8 +217,9 @@ Let's try it out:
 ```
 ~fintud-macrep:dojo/examples> |start %up
 >=
-~fintud-macrep:dojo/examples> :up &atom 'on'
 ~fintud-macrep:dojo/examples> :up &atom 'http://www.google.com'
+>=
+~fintud-macrep:dojo/examples> :up &atom %on
 >=
 [%all-is-well 200]
 'arrive here'

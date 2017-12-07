@@ -140,7 +140,7 @@ Cheat sheet:
 
 -   `&` (pam) can either be the boolean true (as can `%.y`, `0`), or
     the irregular wide form of the `?&`
-    ([wutpam](../../hoon/twig/wut-test/pam-and)) rune, which computes
+    ([wutpam](../../hoon/twig/wut/pam)) rune, which computes
     logical `AND` on its two children.
 
 -   Similar to `&`,`|` is either the boolean false (along with `%.n` and
