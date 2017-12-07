@@ -7,15 +7,13 @@ title: Basic types
 
 # Basic types
 
-A `span` is a set of nouns and an interpretation of these nouns.
-Officially, we don't use the word "type" in Hoon.  But if we had
-to say "type," it would mean `span`.
+A Hoon type is a set of nouns and an interpretation of these nouns.
 
-## Type, span and mold
+## Type and mold
 
-There is no Hoon syntax for a span.  The programmer never defines
-a span explicitly.  It is always produced as the inferred range
-of an expression (`twig`).
+There is no Hoon syntax for a type.  The programmer never defines
+a type explicitly.  It is always produced as the inferred range
+of a hoon.
 
 But we still need simple, well-formed expressions that produce
 regular and well-shaped ranges, for three reasons.
@@ -31,74 +29,74 @@ function, or *mold*.
 A mold is an idempotent function (`gate`), accepting any noun.
 (An idempotent function is one such that *f(f(x))* equals *f(x)*
 if *f(x)* terminates.)  The product range of the function is the
-span, or *icon*, of the mold.
+type, or *icon*, of the mold.
 
 Usually we use molds purely in the first sense: as an abstract
 definition of a noun.  Don't actually call a mold unless you're
 actually validating untrusted foreign data.  As a beginner,
 hopefully you aren't!
 
-## `span`: a set of nouns
+## `type`: a set of nouns
 
-Below is the mold for `span`.  You haven't seen this syntax before,
+Below is the mold for `type`.  You haven't seen this syntax before,
 and we haven't explained it yet; just treat it as pseudocode.
 
-This is a slightly simplified version of `span`.  We undo and explain the
+This is a slightly simplified version of `type`.  We undo and explain the
 simplifications in the [advanced types](../advanced) section.
 
 ```
 ++  term  @tas
-++  span
-  $@  $?  $noun
-          $void
-  ==  $%  {$atom p/term q/(unit atom)}
-          {$cell p/span q/span}
-          {$core p/span q/(map term twig)}
-          {$face p/term q/span}
-          {$fork p/(set span)}
-          {$hold p/span q/twig}
+++  type
+  $@  $?  %noun
+          %void
+  ==  $%  [%atom p=term q=(unit atom)]
+          [%cell p=type q=type]
+          [%core p=type q=(map term hoon)]
+          [%face p=term q=type]
+          [%fork p=(set type)]
+          [%hold p=type q=hoon]
       ==
 ```
 
-If a span is an atom, it's either the atomic string `noun` or
+If a type is an atom, it's either the atomic string `noun` or
 `void`; if a cell, it's a tuple with one of the heads `atom`,
 `cell`, `core`, etc.  We'll go through each of these cases below.
 
-### `?($noun $void)`
+### `?(%noun %void)`
 
-`$noun` is the set of all nouns.  `$void` is the set of no nouns.
+`%noun` is the set of all nouns.  `%void` is the set of no nouns.
 
-### `{$cell p/span q/span}`
+### `[%cell p=type q=type]`
 
-`{$cell p/span q/span}` is the set of all cells with head `p` and
+`[%cell p=type q=type]` is the set of all cells with head `p` and
 tail `q`.
 
-### `{$fork p/(set span)}`
+### `[%fork p=(set type)]`
 
-`{$fork p/(set span)}` is the union of all spans in the set `p`.
+`[%fork p=(set type)]` is the union of all types in the set `p`.
 
-### `{$hold p/span q/twig}`
+### `[%hold p=type q=hoon]`
 
-A `$hold` span, with span `p` and twig `q`, is a lazy reference
-to the span of `(mint p q)`.  In English, it means: "the type of
+A `%hold` type, with type `p` and hoon `q`, is a lazy reference
+to the type of `(mint p q)`.  In English, it means: "the type of
 the product when we compile `q` against subject `p`."
 
-### `{$face p/term q/span}`
+### `[%face p=term q=type]`
 
-A `{$face p/term q/span}` wraps the label `p` around the span
+A `[%face p=term q=type]` wraps the label `p` around the type
 `q`.  `p` is a `term` or `@tas`, an atomic ASCII string which
 obeys symbol rules: lowercase and digit only, infix hyphen,
 first character must be lowercase.
 
-See [`:limb`](../twig/limb/limb) for how labels are resolved.  It's
+See [`%limb`](../hoon/limb/limb) for how labels are resolved.  It's
 nontrivial.
 
-### `{%atom p/term q/(unit atom))}`
+### `[%atom p=term q=(unit atom))]`
 
-An `$atom` is an atom, with two twists.  `q` is a `unit`, Hoon's
+An `%atom` is an atom, with two twists.  `q` is a `unit`, Hoon's
 equivalent of a nullable pointer or a Haskell `Maybe`.  If `q`
-is `~`, null, the span is *warm*; any atom is in the span.  
-If `q` is `[~ x]`, where `x` is any atom, the span is *cold*;
+is `~`, null, the type is *warm*; any atom is in the type.  
+If `q` is `[~ x]`, where `x` is any atom, the type is *cold*;
 its only legal value is the constant `x`.
 
 `p` in the atom is a terminal used as an *aura*, or soft atom
@@ -140,7 +138,7 @@ here are some conventions bound to constant syntax:
   @sw           signed base64
   @sx           signed hexadecimal
 @t              UTF-8 text (cord)
-  @ta           ASCII text (span)
+  @ta           ASCII text (knot)
     @tas        ASCII symbol (term)
 @u              unsigned integer
   @ub           unsigned binary
@@ -155,14 +153,14 @@ statically, by casting through the empty aura `@`.  Hoon is not
 dependently typed and can't statically enforce data constraints
 (for example, it can't enforce that a `@tas` is really a symbol).
 
-### `{$core p/span q/(map term span)}`
+### `[%core p=type q=(map term type)]`
 
-A `$core` is a code-data cell.  The data (or *payload*) is the
-tail; the code (or *battery*) is the head.  `p`, a span, is the
-span of the payload.  `q`, a name-twig table, is the source code
+A `%core` is a code-data cell.  The data (or *payload*) is the
+tail; the code (or *battery*) is the head.  `p` is the
+type of the payload.  `q`, a name-hoon table, is the source code
 for the battery.
 
-Each twig in the battery source is compiled to a formula, with
+Each hoon in the battery source is compiled to a formula, with
 the core itself as the subject.  The battery is a tree of these
 formulas, or *arms*.  An arm is a computed attribute against its
 core.
@@ -174,8 +172,8 @@ sense.  An arm is a computed attribute.  A method is an arm whose
 product is a Hoon function (or *gate*).
 
 A gate (function, lambda, etc) is a core with one arm, whose name
-is the empty symbol `$`, and a payload whose shape is `{sample
-context}`.  The *context* is the subject in which the gate was
+is the empty symbol `$`, and a payload whose shape is `[sample
+context]`.  The *context* is the subject in which the gate was
 defined; the *sample* is the argument.
 
 To call this function on an argument `x`, replace the sample (at
